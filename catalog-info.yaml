@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: camel-app
+  description: camel-app from api
+  tags:
+    - java
+  links:
+    - url: https://devspaces.apps.cluster-xvdzv.dynamic.redhatworkshops.io/?storageType=per-workspace#https://github.com/rrbanda/contract-first-camel-app-service
+      title: OpenShift Dev Spaces
+      icon: web
+    - url: https://hawtio-online-hawtio-operator.apps.cluster-xvdzv.dynamic.redhatworkshops.io/online/discover
+      title: HawtIO
+      icon: web
+  annotations:
+    github.com/project-slug: rrbanda/contract-first-camel-app-service
+    backstage.io/kubernetes-id: camel-app
+    backstage.io/kubernetes-label-selector: system=contract-first
+    janus-idp.io/tekton : camel-app-service
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/backstage-admins
+  system: system:default/contract-first
+  
+  providesApis: 
+    - openapi
+  
+  
