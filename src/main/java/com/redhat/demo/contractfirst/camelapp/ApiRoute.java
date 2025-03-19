@@ -14,7 +14,7 @@ public class ApiRoute extends RouteBuilder {
                 .bindingPackageScan("com.redhat.demo.contractfirst.camelapp");
         
         
-        rest().openApi().specification("openapi-api.json").missingOperation("ignore");
+        rest().openApi().specification("openapi-api.json").missingOperation("mock");
         
 
         
